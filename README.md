@@ -1,6 +1,9 @@
 # i3-dotfiles
 Dotfiles for my i3 configuration.
 
+## Screenshot
+![Screenshot](screenshot.png)
+
 ## Dependencies
 - Window-manager: [i3-gaps](https://github.com/Airblader/i3)
 - Notifications: [dunst](https://launchpad.net/ubuntu/+source/dunst)
@@ -15,6 +18,3 @@ Dotfiles for my i3 configuration.
 - Clock widget: [tty-clock](https://github.com/xorg62/tty-clock)
 - Command line system information tool: [neofetch](https://github.com/dylanaraps/neofetch)
 - [Wallpaper](https://www.wallpaperflare.com/white-moon-night-minimalism-sky-power-lines-wallpaper-203381)
-
-## Screenshot
-![Screenshot](screenshot.png)

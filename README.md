@@ -2,7 +2,7 @@
 Dotfiles for my i3 configuration.
 
 ## Dependencies
-- Window-manager [i3-gaps] (https://github.com/Airblader/i3)
+- Window-manager: [i3-gaps] (https://github.com/Airblader/i3)
 - Notifications: [dunst](https://launchpad.net/ubuntu/+source/dunst)
 - Status bar: [i3blocks](https://github.com/vivien/i3blocks)
 - Launcher: [rofi](https://github.com/DaveDavenport/rofi)

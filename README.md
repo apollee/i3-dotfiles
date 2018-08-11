@@ -14,4 +14,4 @@ Dotfiles for my i3 configuration.
 - To enable opacity: [compton](https://aur.archlinux.org/packages/compton/)
 - Clock widget: [tty-clock](https://github.com/xorg62/tty-clock)
 - Command line system information tool: [neofetch](https://github.com/dylanaraps/neofetch)
-- [wallpaper:](https://www.wallpaperflare.com/white-moon-night-minimalism-sky-power-lines-wallpaper-203381)
+- [Wallpaper:](https://www.wallpaperflare.com/white-moon-night-minimalism-sky-power-lines-wallpaper-203381)

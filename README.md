@@ -15,3 +15,6 @@ Dotfiles for my i3 configuration.
 - Clock widget: [tty-clock](https://github.com/xorg62/tty-clock)
 - Command line system information tool: [neofetch](https://github.com/dylanaraps/neofetch)
 - [Wallpaper](https://www.wallpaperflare.com/white-moon-night-minimalism-sky-power-lines-wallpaper-203381)
+
+## Screenshot
+![Screenshot](screenshot.png)

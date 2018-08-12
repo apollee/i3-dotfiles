@@ -190,7 +190,7 @@ bar {
 }
 
 hide_edge_borders both
-bindsym $mod+Shift+x exec i3lock -i ~/Downloads/spirited4.png
+bindsym $mod+o exec i3lock -i ~/Downloads/spirited4.png
 
 
 

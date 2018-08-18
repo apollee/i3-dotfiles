@@ -218,7 +218,7 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym Print exec scrot
 
 #Things that are turned on/open on startup
-exec xinput set-prop 15 "libinput Tapping Enabled" 1
+exec xinput set-prop 19 "libinput Tapping Enabled" 1
 exec spotify
 exec_always compton
 

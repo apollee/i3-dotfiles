@@ -84,7 +84,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+space+f focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -93,36 +93,39 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 set $workspace1 "1.  "
-set $workspace3 "3.  "
-set $workspace4 "4. "
+set $workspace2 "2.  "
+set $workspace3 "3.  "
+set $workspace4 "4.  "
 set $workspace5 "5.  "
-set $workspace6 "6. "
+set $workspace6 "6.  "
 set $workspace7 "7. "
 set $workspace8 "8.  "
+set $workspace9 "9.  "
+set $workspace0 "0.  "
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
-bindsym $mod+2 workspace 2
+bindsym $mod+2 workspace $workspace2
 bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace $workspace4
 bindsym $mod+5 workspace $workspace5
 bindsym $mod+6 workspace $workspace6
 bindsym $mod+7 workspace $workspace7
 bindsym $mod+8 workspace $workspace8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace0
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
-bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+2 move container to workspace $workspace2
 bindsym $mod+Shift+3 move container to workspace $workspace3
 bindsym $mod+Shift+4 move container to workspace $workspace4
 bindsym $mod+Shift+5 move container to workspace $workspace5
 bindsym $mod+Shift+6 move container to workspace $workspace6
 bindsym $mod+Shift+7 move container to workspace $workspace7
 bindsym $mod+Shift+8 move container to workspace $workspace8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+9 move container to workspace $workspace9
+bindsym $mod+Shift+0 move container to workspace $workspace0
 
 #assigning apps to workspaces
 for_window[class="Spotify"] move to workspace $workspace4
@@ -184,7 +187,7 @@ bar {
 	colors {
 		background $bg-color
 		separator #757575
-		#                  border             background         text
+#                 border             background         text
 		focused_workspace  $bg-color          $bg-color          $new2
 		active_workspace   $inactive-bg-color $inactive-bg-color $inactive-text-color
 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
@@ -194,8 +197,6 @@ bar {
 
 hide_edge_borders both
 bindsym $mod+o exec i3lock -i ~/Pictures/spirited4.png
-
-
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -210,6 +211,7 @@ bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
 # Touchpad controls
 bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
+exec xinput set-prop 20 "libinput Tapping Enabled" 1
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -217,10 +219,9 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 #Print screen controls
-bindsym Print exec scrot
+bindsym Print exec shutter
 
 #Things that are turned on/open on startup
-exec xinput set-prop 15 "libinput Tapping Enabled" 1
 exec spotify
 exec_always compton
 
@@ -232,16 +233,23 @@ bindsym $mod+t exec thunar
 
 #For i3gaps
 for_window [class="^.*"] border pixel 0
-smart_gaps on
-gaps inner 20
-gaps outer 20
+#smart_gaps on
+#gaps inner 1
+#gaps outer 7
 
-#To run pywal on startup
-exec wal -i "/home/maria/Pictures/Wallpapers/panorama1.jpg" 
+#To run nitrogen  on startup
+exec --no-startup-id nitrogen --restore
 
 #To run dunst as the notification daemon
 exec killall -q notify-osd
 exec --no-startup-id dunst
+
+#Change keyboard layout to pt
+bindsym $mod+space exec setxkbmap -layout pt
+
+#Change keyboard layout to us
+bindsym $mod+u exec setxkbmap -layout us
+
 
 #Dual monitor setup
 
@@ -255,11 +263,11 @@ exec --no-startup-id dunst
 	#Ouputs for workspces
 	workspace 1 output $monitor1
 	workspace 2 output $monitor2
-	workspace 3 output $monitor2
+	workspace 3 output $monitor1
 	workspace 4 output $monitor2
 	workspace 5 output $monitor2
 	workspace 6 output $monitor1
 	workspace 7 output $monitor1
-	workspace 8 output $monitor8
-
+	workspace 8 output $monitor1
+    workspace 9 output $monitor1
 
